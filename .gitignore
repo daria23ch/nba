@@ -2,4 +2,4 @@
 # Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/WpfNBA/v16/Server/sqlite3
+/.vs/WpfNBA/v16/Server/sqlite3/db.lock
