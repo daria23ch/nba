@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\pro_dpo1\Desktop\n\WpfNBA\WpfNBA\App.xaml
-51859411262
+72013967469
 2-546771971
-27210077289
+30-1042026428
 19-417843265
-MainWindow.xaml;pages\Matchup.xaml;pages\PageMain.xaml;pages\Players.xaml;pages\Visitor.xaml;
+MainWindow.xaml;pages\admin.xaml;pages\MatchupPage.xaml;pages\PageEditOrPlayer.xaml;pages\PageMain.xaml;pages\Players.xaml;pages\Visitor.xaml;
 
-True
+False
 

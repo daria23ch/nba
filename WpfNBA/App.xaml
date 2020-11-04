@@ -22,5 +22,10 @@
             <Setter Property="SelectedIndex" Value="0"></Setter>
         </Style>
         <Style TargetType="TextBox" BasedOn="{StaticResource mainControl}"></Style>
+        <Style TargetType="TextBlock" x:Key="wordsStyle">
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
     </Application.Resources>
 </Application>

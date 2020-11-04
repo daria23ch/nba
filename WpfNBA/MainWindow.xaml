@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfNBA"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Height="550" Width="1000" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"></RowDefinition>
@@ -13,7 +13,7 @@
             <RowDefinition Height="25"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid>
-            <Button x:Name="BtnBack" Click="BtnBack_Click" HorizontalAlignment="Center" Height="35" Margin="671,34,31,31" Width="90" Background="White" Foreground="Black">Back</Button>
+            <Button x:Name="BtnBack" Click="BtnBack_Click" HorizontalAlignment="Center" Height="35" Margin="792,34,10,31" Width="90" Background="White" Foreground="Black">Back</Button>
             <TextBlock Text="{Binding ElementName=MainFrame, Path=Content.Title}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36"></TextBlock>
             <StackPanel Orientation="Horizontal">
                 <Image Source="C:\Users\pro_dpo1\source\repos\WpfNBA\WpfNBA\Resources\logo.jpg"></Image>
@@ -21,7 +21,11 @@
             </StackPanel>
         </Grid>
         <Frame x:Name="MainFrame" Grid.Row="1" ContentRendered="MainFrame_ContentRendered"  NavigationUIVisibility="Hidden"></Frame>
-        <Rectangle Grid.Row="2" Fill="{StaticResource ColorMain}"></Rectangle> 
- 
+        <Rectangle Grid.Row="2" Fill="{StaticResource ColorMain}">
+            
+        </Rectangle>
+        <TextBlock Grid.Row="2" HorizontalAlignment="Center" Style="{StaticResource wordsStyle}">
+            The current season 2016-2017, and the NBA already has a history of 71 years.
+        </TextBlock>
     </Grid>
 </Window>

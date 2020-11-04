@@ -1,0 +1,65 @@
+﻿<Page x:Class="WpfNBA.pages.MatchupPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfNBA.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MatchupPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="130"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel x:Name="stackMatchupMain" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image Source="{Binding TeamAway.Logo}" Width="110"></Image>
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="{Binding TeamAway.TeamName}"></TextBlock>
+                <TextBlock Text="(Away)"></TextBlock>
+            </StackPanel>
+            <StackPanel Margin="25">
+                <TextBlock FontSize="46">VS</TextBlock>
+                <TextBlock Text="{Binding Starttime, StringFormat={}{0:HH:mm}}" HorizontalAlignment="Center"></TextBlock>
+            </StackPanel>
+            <Image Source="{Binding TeamHome.Logo}" Width="110"></Image>
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="{Binding TeamHome.TeamAway}"></TextBlock>
+                <TextBlock Text="(Home)"></TextBlock>
+            </StackPanel>
+        </StackPanel>
+        <ScrollViewer Grid.Row="1" Margin="10">
+            <ItemsControl x:Name="itemsControlMatchUps">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+
+                                <ColumnDefinition Width="2*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+
+                                <ColumnDefinition Width="2*"></ColumnDefinition>
+                                <ColumnDefinition Width="2*"></ColumnDefinition>
+                                <ColumnDefinition Width="100"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding StatusString}" Background="{Binding StatusColor}" TextAlignment="Center" Margin="5" Padding="5" Height="27"></TextBlock>
+                            <TextBlock Text="{Binding Starttime, StringFormat={}{0:MM/dd HH:mm}}" TextAlignment="Center" Grid.Column="1" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                            <Image Source="{Binding TeamAway.Logo}" Grid.Column="2" HorizontalAlignment="Center" Margin="5" Height="40"></Image>
+                            <TextBlock Text="{Binding TeamAway.TeamName}" Grid.Column="3" HorizontalAlignment="Center" Foreground="{StaticResource ColorMain}" VerticalAlignment="Center"></TextBlock>
+                            <TextBlock Text="{Binding Score}" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                            <Image Source="{Binding TeamHome.Logo}" Grid.Column="5" HorizontalAlignment="Center" Margin="5" Height="40"></Image>
+                            <TextBlock Text="{Binding TeamHome.TeamName}" Grid.Column="6" HorizontalAlignment="Center" Foreground="{StaticResource ColorMain}" VerticalAlignment="Center"></TextBlock>
+                            <TextBlock Text="{Binding Location}" Grid.Column="7" VerticalAlignment="Center"></TextBlock>
+                            <Button x:Name="btnButton" Click="btnButton_Click"  Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center" Margin ="5" Padding="3"  Width="50" Height="27" Background="White" IsEnabled="{Binding buttonIsEnabled}">View</Button>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+    </Grid>
+</Page>

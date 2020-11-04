@@ -37,7 +37,7 @@ namespace WpfNBA.pages
 
         private void btnMatchup_Click(object sender, RoutedEventArgs e)
         {
-            FrameManager.mainFrame.Navigate(new Matchup());
+            FrameManager.mainFrame.Navigate(new MatchupPage());
         }
 
         private void btnPhotos_Click(object sender, RoutedEventArgs e)

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\pro_dpo1\source\repos\WpfNBA\WpfNBA\obj\Debug\
+C:\Users\pro_dpo1\Desktop\n\WpfNBA\WpfNBA\obj\Debug\
 WpfNBA
 none
 false
 DEBUG;TRACE
-C:\Users\pro_dpo1\source\repos\WpfNBA\WpfNBA\App.xaml
-51859411262
+C:\Users\pro_dpo1\Desktop\n\WpfNBA\WpfNBA\App.xaml
+72013967469
 2-546771971
-27210077289
-19-1627154936
-MainWindow.xaml;pages\Matchup.xaml;pages\PageMain.xaml;pages\Players.xaml;pages\Visitor.xaml;
+31-86138088
+19-417843265
+MainWindow.xaml;pages\admin.xaml;pages\MatchupPage.xaml;pages\PageEditOrPlayer.xaml;pages\PageMain.xaml;pages\Players.xaml;pages\Visitor.xaml;
 
 False
 

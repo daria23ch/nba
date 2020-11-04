@@ -15,18 +15,45 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel x:Name="stackLetters" Orientation="Horizontal" Background="{StaticResource ColorMain}">
-            <TextBlock FontWeight="Bold" Foreground="White" Margin="5" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown">
+            <TextBlock Style="{StaticResource wordsStyle}" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown">
                 All
             </TextBlock>
         </StackPanel>
         <StackPanel Grid.Row="1" Orientation="Horizontal" Background="{StaticResource ColorMain}">
-            <TextBlock>Season:</TextBlock>
+         
+            <TextBlock Style="{StaticResource wordsStyle}">Season:</TextBlock>
             <ComboBox Name="cmbSeason" SelectionChanged="cmbSeason_SelectionChanged" DisplayMemberPath="Name"></ComboBox>
-            <TextBlock>Team:</TextBlock>
+            <TextBlock Style="{StaticResource wordsStyle}">Team:</TextBlock>
             <ComboBox Name="cmbTeam" SelectionChanged="cmbTeam_SelectionChanged" DisplayMemberPath="TeamName"></ComboBox>
-            <TextBlock>Playername</TextBlock>
+            <TextBlock Style="{StaticResource wordsStyle}">Playername</TextBlock>
             <TextBox x:Name="txtPlayerName" TextChanged="txtPlayerName_TextChanged"></TextBox>
         
         </StackPanel>
+        <DataGrid x:Name="dataGridPlayers" Grid.Row="2" AutoGenerateColumns="False" IsReadOnly="True" ColumnWidth="*">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding Player.Img}"></Image>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="No." Binding="{Binding ShirtNumber}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Name" Binding="{Binding Player.Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Team" Binding="{Binding Team.Abbr}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Position" Binding="{Binding Player.Position.Abbr}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Weight" Binding="{Binding Player.Weight}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Height" Binding="{Binding Player.Height}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Experience" Binding="{Binding Player.Experience}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Country" Binding="{Binding Player.Country.CountryName}"></DataGridTextColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="btnEdit" Click="btnEdit_Click" Content="Edit" Foreground="Black" Background="White" Margin="3"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>

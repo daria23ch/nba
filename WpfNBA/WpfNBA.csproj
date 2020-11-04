@@ -85,6 +85,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>NBAShort.tt</DependentUpon>
     </Compile>
+    <Compile Include="pages\admin.xaml.cs">
+      <DependentUpon>admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\MatchupPage.xaml.cs">
+      <DependentUpon>MatchupPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\PageEditOrPlayer.xaml.cs">
+      <DependentUpon>PageEditOrPlayer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialClasses\PartialMatchups.cs" />
+    <Compile Include="PartialClasses\PartialPlayer.cs" />
     <Compile Include="Picture.cs">
       <DependentUpon>NBAShort.tt</DependentUpon>
     </Compile>
@@ -122,7 +133,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="pages\Matchup.xaml">
+    <Page Include="pages\admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\MatchupPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\PageEditOrPlayer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -149,9 +168,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NBAShort.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="pages\Matchup.xaml.cs">
-      <DependentUpon>Matchup.xaml</DependentUpon>
     </Compile>
     <Compile Include="pages\PageMain.xaml.cs">
       <DependentUpon>PageMain.xaml</DependentUpon>

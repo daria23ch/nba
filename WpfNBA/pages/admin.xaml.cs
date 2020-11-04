@@ -16,13 +16,23 @@ using System.Windows.Shapes;
 namespace WpfNBA.pages
 {
     /// <summary>
-    /// Логика взаимодействия для Matchup.xaml
+    /// Логика взаимодействия для admin.xaml
     /// </summary>
-    public partial class Matchup : Page
+    public partial class admin : Page
     {
-        public Matchup()
+        public admin()
         {
             InitializeComponent();
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            FrameManager.mainFrame.Navigate(new PageMain());
         }
     }
 }

@@ -16,25 +16,22 @@ using System.Windows.Shapes;
 namespace WpfNBA.pages
 {
     /// <summary>
-    /// Логика взаимодействия для PageMain.xaml
+    /// Логика взаимодействия для MatchupPage.xaml
     /// </summary>
-    public partial class PageMain : Page
+    public partial class MatchupPage : Page
     {
-        public PageMain()
+        public MatchupPage()
         {
             InitializeComponent();
             NBAShortEntities context = new NBAShortEntities();
-            listViewImages.ItemsSource = context.Pictures.ToList();
+            itemsControlMatchUps.ItemsSource = context.Matchups.ToList();
         }
 
-        private void btnVisitor_Click(object sender, RoutedEventArgs e)
+        private void btnButton_Click(object sender, RoutedEventArgs e)
         {
-            FrameManager.mainFrame.Navigate(new Visitor());
-        }
-
-        private void btnAdmin_Click(object sender, RoutedEventArgs e)
-        {
-            FrameManager.mainFrame.Navigate(new admin());
+            Button btnButton = (Button)sender;
+            Matchup currentMatchup = (Matchup)btnButton.DataContext;
+            stackMatchupMain.DataContext = currentMatchup;
         }
     }
 }
